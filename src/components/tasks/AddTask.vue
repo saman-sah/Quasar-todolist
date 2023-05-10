@@ -30,7 +30,7 @@
                         </q-date>
                     </q-popup-proxy>
                     </q-icon>
-                    <q-icon v-if="newTask.dueDate.length"
+                    <q-icon v-if="newTask.dueDate && newTask.dueDate.length"
                     name="close" @click="clearDates()" 
                     class="cursor-pointer" />
                 </template>
@@ -47,7 +47,7 @@
                         </q-time>
                     </q-popup-proxy>
                     </q-icon>
-                    <q-icon v-if="newTask.dueTime.length"
+                    <q-icon v-if="newTask.dueTime && newTask.dueTime.length"
                     name="close" @click="newTask.dueTime=''" 
                     class="cursor-pointer" />
                 </template>
@@ -78,7 +78,7 @@ export default {
         }
     },
     mounted() {
-        if(this.editTask) {
+        if(this.editTask && this.editTask.title) {
             this.tempTask= {
                 title: this.editTask.title,
                 dueDate: this.editTask.dueDate,
