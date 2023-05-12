@@ -1,6 +1,6 @@
 # awesome-todo (awesome-todo)
 
-A Quasar Project
+A Quasar Project todo list
 
 ## Install the dependencies
 ```bash
